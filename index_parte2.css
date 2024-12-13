@@ -1,0 +1,478 @@
+/*galeria de imagenes*/
+
+.gallery {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los videos */
+    align-items: center; /* Alinea los videos verticalmente en el centro */
+    flex-wrap: wrap;
+    gap: 5%;
+    width: 85%;
+    margin: auto;
+    z-index: 2;
+    transform: translateY(10%);
+}
+
+.video-galeria {
+    position: relative;
+    width: 80%; 
+    max-width: 22vw;  
+    height: auto; 
+    aspect-ratio: 4 / 3; 
+}
+
+.video-galeria video, 
+.video-galeria img {
+    width: 25vw;
+    height: 17vw;
+    display: block;
+}
+
+.video-galeria a {
+    top: -20vw;
+}
+
+.overlay-image {
+        position: absolute;
+        transform: translateY(-8%);
+        left: -1.45vw;
+        width: 25vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+}
+
+.overlay-image img {
+    width: 50vw;
+    height: auto;
+    display: none;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .gallery {
+        width: 90%;
+    }
+
+    .video-galeria {
+        max-width: 100%;
+        aspect-ratio: 16 / 9; /* Ajusta la relación de aspecto para pantallas más pequeñas */
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .gallery {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .video-galeria {
+        max-width: 100%;
+        aspect-ratio: 16 / 9; /* Ajusta la relación de aspecto para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 1200px) {
+.gallery{
+    height: auto; /* Mantiene el aspecto adecuado en pantallas más pequeñas */
+}
+}
+
+@media (max-width: 1000px) {
+.gallery{
+    transform: translateY(-60%);
+}
+}
+
+
+.gallery img {
+width: 100%;
+height: auto;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media (max-width: 1000px) {
+.gallery {
+    top: 30vw;
+}
+}
+
+/*fin galeria de imagenes*/
+
+.fondo_2 {
+position: absolute;
+top: 130vw; 
+width: 100vw;
+height: 70vw; /* Puedes ajustar la altura según sea necesario */
+object-fit: cover;
+z-index: 1;
+background-image: url('Decoracion/dorado.jpg');
+background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
+background-position: center; /* Centra la imagen en la pantalla */
+}
+
+@media (max-width: 1400px) {
+.fondo_2 {
+    top: 140vw;
+}
+}
+
+@media (max-width: 1300px) {
+.fondo_2 {
+    top: 145vw;
+}
+}
+
+@media (max-width: 1200px) {
+.fondo_2 {
+    top: 150vw;
+}
+}
+
+@media (max-width: 1100px) {
+.fondo_2 {
+    top: 155vw;
+
+}
+}
+
+@media (max-width: 1000px) {
+.fondo_2 {
+    top: 140vw;
+    height: 60vw;
+}
+}
+
+@media (max-width: 772px) {
+.fondo_2 {
+    top: 140vw;
+}
+}
+
+@media (max-width: 450px) {
+.fondo_2 {
+    top: 145vw;
+}
+}
+
+@media (max-width: 400px) {
+.fondo_2 {
+    top: 150vw;
+}
+}
+
+@media (min-width: 2000px), (max-width: 300px) {
+.fondo_2 {
+    display: none;
+}
+}
+
+/*Mas diseños*/
+
+/* CSS para centrar el <h1> */
+.texto_2 h1 {
+    position: absolute;
+    top: 131vw;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #000000;
+    font-family: Cinzel;
+    font-size: 3em;
+    z-index: 2;
+    text-align: center; /* Asegura el centrado del texto */
+}
+
+.mas_diseños {
+    position: relative;
+    display: inline-block;
+    bottom: 15vw;
+    z-index: 2;
+}
+
+.mas_diseños img {
+    max-width: 50vw; /* Ajusta el tamaño según sea necesario */
+    transition: 0.3s ease; /* Animación suave */
+}
+
+.mas_diseños .texto-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 10px 20px;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Para que no interfiera con el enlace */
+}
+
+.mas_diseños:hover img {
+    filter: blur(4px); /* Efecto de desenfoque */
+}
+
+.mas_diseños:hover .texto-overlay {
+    opacity: 1; /* Muestra el texto */
+}
+
+    
+/*Mas diseños fin*/
+
+/*Accesorios*/
+
+.texto_3 h1 {
+    position: absolute;
+    top: 200vw;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: Cinzel;
+    font-size: 3em;
+    z-index: 2;
+    text-align: center; /* Asegura el centrado del texto */
+}
+
+.Accesorios {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+.accesorios {
+position: relative;
+top: -4vw;
+display: flex;
+gap: 6vw;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.accesorios a {
+display: inline-block;
+transition: transform 0.3s ease-in-out;
+max-width: 25vw;
+width: 100%;
+}
+
+.accesorios a:hover {
+transform: scale(1.1);
+}
+
+.accesorios img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 10px;
+}
+
+/*Accesorios fin*/
+
+/*pie de pagina*/
+
+
+* {
+font-family: Cinzel;
+font-weight: bold;
+}
+
+section {
+width: 100%;
+display: inline-block;
+background: #000000;
+text-align: center;
+font-size: 22px;
+font-weight: 700;
+text-decoration: underline;
+}
+
+.footer-distributed{
+background-image: url('Decoracion/dorado.jpg');
+background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
+background-position: center; /* Centra la imagen en la pantalla */
+box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+box-sizing: border-box;
+width: 100%;
+text-align: left;
+font: bold 16px sans-serif;
+padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+display: inline-block;
+vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+width: 40%;
+}
+
+/* The company logo */
+
+.footer-left img{
+width: 10vw; /* Ancho de las imágenes */
+height: 10vw; /* Altura de las imágenes */
+transform: translate(7vw);
+height: auto;
+transition: transform 0.3s ease;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+color:  #000000;
+margin: 20px 0 12px;
+padding: 0;
+}
+
+.footer-distributed .footer-links a{
+display:inline-block;
+line-height: 1.8;
+font-weight:400;
+text-decoration: none;
+color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+color:  #575757;
+font-size: 14px;
+font-weight: normal;
+margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+width: 35%;
+}
+
+.footer-distributed .footer-center i{
+background-color:  #33383b;
+color: #ffffff;
+font-size: 25px;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+text-align: center;
+line-height: 42px;
+margin: 10px 15px;
+vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+font-size: 17px;
+line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+display: inline-block;
+color: #000000;
+font-weight:400;
+vertical-align: middle;
+margin:0;
+}
+
+.footer-distributed .footer-center p span{
+display:block;
+font-weight: normal;
+font-size:14px;
+line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+color:  rgb(0, 0, 0);
+text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+content: "|";
+font-weight:300;
+font-size: 20px;
+left: 0;
+color: #000000;
+display: inline-block;
+padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+line-height: 20px;
+color:  #000000;
+font-size: 15px;
+font-weight: normal;
+margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+display: block;
+color:  #000000;
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+display: inline-block;
+width: 35px;
+height: 35px;
+cursor: pointer;
+background-color:  #33383b;
+border-radius: 2px;
+
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+line-height: 35px;
+
+margin-right: 3px;
+margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+
+.footer-distributed{
+    font: bold 14px sans-serif;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.footer-distributed .footer-center i{
+    margin-left: 0;
+}
+
+}
+/*fin pie de pagina*/

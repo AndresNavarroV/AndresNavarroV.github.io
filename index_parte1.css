@@ -1,0 +1,314 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000; /* Fondo oscuro */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/*whatsapp*/
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+}
+/*whatsapp fin*/
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px; /* Espaciado interno */
+  background-image: url('Decoracion/dorado.jpg');
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en la pantalla */
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+.hide-header {
+  display: none; 
+}
+
+.top_area {
+  float: left;
+  display: flex; /* Mostrar los elementos en línea */
+  justify-content: flex-end; /* Alinear los elementos al final del contenedor */
+  align-items: center; /* Alinear verticalmente los elementos al centro */
+}
+
+.icons img {
+  margin: 20px;
+  padding: 0px;
+  width: 30px; /* Ancho de las imágenes */
+  height: 30px; /* Altura de las imágenes */
+  border-radius: 50%; /* Forma redondeada */
+}
+
+.icons a {
+  text-decoration: none;
+}
+
+.Logo_corrido {
+  position: absolute;
+  display: flex;
+  width: 40px; /* Ancho de las imágenes */
+  height: 40px; /* Altura de las imágenes */
+  left: 25vw;
+}
+
+@media(min-width:600px){ /* header responsivo*/
+  header{
+    flex-direction: row;
+    padding: 0px 30px;
+    justify-content: space-between;
+  }
+}
+/* fin header */
+
+/* encabezado */
+.encabezado{
+  width: 100%; /* Ancho del div */
+  padding: 25vw;
+  background-color: #000000; /* Color de fondo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  /* Otros estilos según tus necesidades */
+}
+
+.logo img{
+  width: 35vw; /* Ancho de las imágenes */
+  height: 35vw; /* Altura de las imágenes */
+  position: relative;
+  top: 14%;
+  transform: translateY(-13%);
+  right: 20%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.01);
+}
+
+@media (min-width:800px){ /* cabecera responsivo*/
+  .logo img{
+    top: -13vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:350px){ /* cabecera responsivo*/
+  .logo img{
+    top: 5vw;
+  }
+}
+
+.logo_nombre img{
+  width: 40vw; /* Ancho de las imágenes */
+  height: 40vw; /* Altura de las imágenes */
+  position:relative;
+  top: 25%;
+  transform: translateY(-340%);
+  right: -27%;
+  height: auto;
+}
+
+@media (min-width:800px){ /* cabecera responsivo*/
+  .logo_nombre img{
+    top: -13vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contacto img{
+  width: 20vw; /* Ancho de las imágenes */
+  height: 8vw; /* Altura de las imágenes */
+  position: relative;
+  top: 20%;
+  transform: translateY(-220%);
+  left: 36%;
+}
+
+@media (min-width:800px){ /* cabecera responsivo*/
+  .contacto img{
+    top: -13vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contacto a{
+  text-decoration: none;
+}
+
+.hecho_mexico img{
+  width: 9vw; /* Ancho de las imágenes */
+  height: 9vw; /* Altura de las imágenes */
+  position: relative;
+  transform: translateY(-440%);
+  top: 20%;
+  left: 42.5%;
+}
+
+@media (min-width:800px){ /* cabecera responsivo*/
+  .hecho_mexico img{
+    top: -13vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* fin encabezado */ 
+
+/*video fondo*/
+.video_fondo {
+  min-height: 100vh;
+  position: relative;
+}
+
+video {
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%); /* Centra el video */
+  z-index: 3;
+}
+
+/* Media queries adicionales para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+  video {
+    height: auto; /* Mantiene el aspecto adecuado en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 1000px) {
+  .video_fondo {
+    min-height: 55vh; /* Ajusta la altura mínima en dispositivos móviles */
+  }
+  video {
+    height: auto; /* Mantiene el aspecto adecuado en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 800px) {
+  .video_fondo {
+    min-height: 40vh; /* Ajusta la altura mínima en dispositivos móviles */
+  }
+  video {
+    height: auto; /* Mantiene el aspecto adecuado en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 600px) {
+  .video_fondo {
+    min-height: 30vh; /* Ajusta la altura mínima en dispositivos móviles */
+  }
+  video {
+    height: auto; /* Mantiene el aspecto adecuado en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 400px) {
+  .video_fondo {
+    min-height: 20vh; /* Ajusta la altura mínima en dispositivos móviles */
+  }
+  video {
+    height: auto; /* Mantiene el aspecto adecuado en pantallas más pequeñas */
+  }
+}
+
+/*fin video fondo*/
+
+/*Inicio texto 1*/
+.texto_1 p {
+  position: absolute;
+  top: 100vw;
+  color: #fffafa; /* Texto negro */
+  font-family: Cinzel;
+  font-size: 2em; /* Tamaño de fuente responsivo */
+  text-align: center;
+  margin: 10% 10%;
+}
+
+@media (max-width: 1200px) {
+  .texto_1 p{
+    height: auto; /* Mantiene el aspecto adecuado en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 1000px) {
+  .texto_1 p{
+    top: 112vw; /* Ajusta la altura mínima en dispositivos móviles */
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 900px) {
+  .texto_1 p{
+    top: 110vw; /* Ajusta la altura mínima en dispositivos móviles */
+  }
+}
+
+@media (max-width: 800px) {
+  .texto_1 p{
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .texto_1 p {
+    min-height: 30vw; /* Ajusta la altura mínima en dispositivos móviles */
+  }
+}
+
+@media (max-width: 517px) {
+  .texto_1 p {
+    font-size: .75em;
+  }
+}
+
+@media (max-width: 400px) {
+  .texto_1 p {
+    top: 115vw; /* Ajusta la altura mínima en dispositivos móviles */
+  }
+}
+
+@media (max-width: 387px) {
+  .texto_1 p {
+    font-size: .6em;
+  }
+}
+/*Fin texto 1*/
+
+
+
+
